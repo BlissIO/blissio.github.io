@@ -1,3 +1,14 @@
-html {background: black;color: white ;text-decoration: none;font-family: JetBrains Mono ;text-align: center;}
-img {border-style: dotted; color: yellow;}
-a {color:gold;}
+html {
+  background: #161320;
+  color: #D9E0EE ;
+  text-decoration: none;
+  font-family: JetBrains Mono ;
+  text-align: center;
+}
+a {
+  color: #9c7b83;
+  text-decoration: none;
+}
+.green {
+  color: green;
+}
