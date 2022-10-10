@@ -1,10 +1,10 @@
-CTYPE html>
+<!DOCTYPE html>
 <html lang="en_US">
     <head>
             <title>Shaolin's hub</title>
             <meta name="description" content="SHAOLINGIT's Personal Website">
             <meta name="author" content="shaolingit">
-            <link rel="icon" type="image/x-icon" href="index.png">
+            <link rel="icon" type="image/x-icon" href="/index.png">
     </head>
 <body>
     <div id="container">
@@ -12,12 +12,12 @@ CTYPE html>
                 <div id="header" style="height: 252px;"></div>
                 
             <nav id="navbar" style="margin-bottom: 0px;"><ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/blog.html">Blogs</a></li>
                 <li><a href="https://github.com/shaolingit">Git</a></li>
                 <li><a href="https://www.youtube.com/channel/UCOQHLm32PksPNSgt6te0SLQ">Youtube</a></li>
                 <li><a href="https://codeberg.org/shaolin">Codeberg</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="/about.html">About</a></li>
               </ul></nav></div>
 
             <div id="flex">
@@ -53,7 +53,66 @@ CTYPE html>
                 <main>
                     <h1>Welcome to my personal space!</h1>
                     <p><strong>Please read this first!</strong></p>
-                    <p>I am Rayane EL YASTI, aka shaolin/shaolingit. I am a 16 years old guy, who loves tinkering with Computers and Software.I have a <a href="https://www.youtube.com/channel/UCOQHLm32PksPNSgt6te0SLQ">youtube channel</a>.</p>
+                    <h1 class="title">Blog posts :</h1>
+<div id="blog-list">
+  <blockquote>
+    This is a list of all of my blogs. I change my mind every second so they become outdated like a day later :p
+  </blockquote>
+  
+  <div id="blog-summary"> 
+    <h3><a href="blogs/Is-it-time-to-move-onto-FreeBSD.html/">Is it time to move onto FreeBSD</a></h3>
+    
+  </div>
+  
+    <hr>
+  
+  
+  <div id="blog-summary"> 
+    <h3><a href="blogs/Is-it-time-to-wake-up.html/">It is time to wake up</a></h3>
+    
+  
+  </div>
+  
+    <hr>
+  
+  
+  <div id="blog-summary"> 
+    <h3><a href="blogs/I-was-wrong-about-everything-bsd-related.html/">I was wrong about everything bsd related</a></h3>
+   
+
+  </div>
+  
+    <hr>
+  
+  
+  <div id="blog-summary"> 
+    <h3><a href="blogs/The-best-technologie-is-no-technologie.html/">The best technologie is no technologie</a></h3>
+    
+  </div>
+  
+    <hr>
+  
+  
+  <div id="blog-summary"> 
+    <h3><a href="blogs/Trying-a-static-website-generator.html/">Trying a static website generator</a></h3>
+    
+  </div>
+  
+    <hr>
+  
+  
+  <div id="blog-summary"> 
+    <h3><a href="blogs/why-would-anyone-make-a-website.html/">why would anyone make a website</a></h3>
+    
+  </div>
+  
+    <hr>
+  
+  
+  <div id="blog-summary"> 
+    <h3><a href="blogs/Youtube-is-bad.html/">Youtube is bad</a></h3>
+   
+  </div>
 
                 </main>
                 
@@ -71,8 +130,8 @@ CTYPE html>
     the images as variables */
 
             :root {
-                --header-image: url('wallhaven-4or1yp.jpg');
-                --body-bg-image: url('greengrid.jpg');
+                --header-image: url('/wallhaven-4or1yp.jpg');
+                --body-bg-image: url('/greengrid.jpg');
 
                 /* colors */
                 --content: #253b31;/*#43256E*/
@@ -247,6 +306,7 @@ CTYPE html>
 
             h1,
             h2,
+            hr,
             h3 {
                 color: #cfff8d;/*ED64F5*/
             }
