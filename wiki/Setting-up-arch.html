@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Life Dashboard</title>
+    <link rel="icon" href="/old-man-min.png">
+</head>
+<body>
+    <img class="hover" style="height:auto;" alt="" width="260" height="260" src="/old-man-min.png" title="Made with DALL-E">
+    <h1>Life dashboard</h1>
+    <blockquote class="block-quote">"Constantly seek criticism. A well thought out critique of what you're doing is as valuable as gold"<br><br>-Elon Musk</blockquote>
+    <p>This guide assumes you have already installed archlinux with a minimal install without Xorg set up</p>
+    <p>I prefer not to use the archinstall script that comes with the iso. This isn't because I am some elitist and the such<br> it is just that I prefer knowing what I have on my distro to the maximum that's why I use minimal distros like arch, Gentoo, and kiss Linux...</p>
+    <p>I think that the command pacstrap itself is an arch installer script because when you go to distros like Gentoo and kiss you<br> realize just how much stuff is automated with pacstrap.</p>
+    <p>To install a minimal install of Xorg on achrlinux run the following command:</p>
+		<span class="code">pacman -S --noconfirm xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop</span>
+    <p>Now after this I prefer installing fonts so you could use your web browser and other programs I always go for the following packages:</p>
+	<span class="code">pacman -S noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome</span>
+	<p> These packages always took care of any problems I had with Xorg or any other program not starting (of course just the font problem).</p>
+	Next here are some basic packages that any archinux user would need (neofetch not included :p)</p>
+	<span class="code">pacman -S ffmpeg imagemagick fzf man-db unclutter xclip git zip unzip unrar p7zip xdotool \
+	<br> dosfstools ntfs-3g libnotify dunst jq networkmanager wpa_supplicant rsync pamixer libconfig</span>
+	<p>After that I install an aur helper because of course why would you use arch without using the aur? (This is just a joke btw relax)</p>
+	<span class="code">cd £HOME 
+<br>mkdir .config
+<br>git clone https://aur.archlinux.org/pikaur.git
+<br>cd pikaur
+<br>makepkg -fsri
+<br>cd $HOME</span>
+	<p>This code puts pikaur's sourcecode inside your .config folder in your home directory.</p>
+	<p>After installing an aur helper I would install libxft-bgra-git because I use dwm and need such packages for emojis to work.</p>
+	<span class="code">pikaur -S libxft-bgra-git</span>
+	<p>Now ! let's get into the real stuff to make Xorg work you need to set up your .xinit folder.</p>
+	<p>Here I will give the example of installing the awesome window manager since most people going to such lengths <br>of installing arch would use a window manager. And that the awesome window manager is easy to use and understand<p>
+	<span class="code">touch .xinitrc/span>
+	<p>Now open .xinitrc in your favorite text editor and place the following text:</p>
+	<span class="code">exec awesome</span>
+	<p>This enables you to run the awesome window manager after you run the "startx" command</p>
+	<p>Now if you want to know what to put in the .xinitrc file to start your chosen program please head onto the archlinux wiki and type your chosen desktop environment or window manager in the search bar most of the time you are gonna have the needed text in their page.<br> If not a quick google search should fix the issue.</p>
+	<h3>Please have fun with your arch install tinker and explore to your heart's content !! Do not be afraid of breaking it it is part of the learning process.</h3>
+		<h4><a style="color:gold" href="/">Back to the home page.</a></h4>
+ <hr>
+    <footer>
+        <br>
+        <nav>
+            <a href="https://landchad.net" target="_blank">
+              <img src="/gifs/landchad.gif" target="_blank" alt="landchad.net">
+            </a>
+            <a href="https://wiby.me" target="_blank">
+              <img src="/gifs/wiby.gif" target="_blank" alt="wiby.me">
+            </a>
+            <a href="https://sadgrl.online/" target="_blank">
+              <img src="/gifs/sadgrl.gif" alt="sadgrl.online">
+            </a>
+            <a href="https://nuange.neocities.org/" target="_blank">
+              <img src="/gifs/nuange.gif" alt="nuange.neocities.org">
+            </a>
+          </nav>
+    </footer>
+</body>
+</html>

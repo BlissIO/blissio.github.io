@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Life Dashboard</title>
+    <link rel="icon" href="/old-man-min.png">
+</head>
+<body>
+    <img class="hover" style="height:auto;" alt="" width="260" height="260" src="/old-man-min.png" title="Made with DALL-E">
+    <h1>Life dashboard</h1>
+    <blockquote class="block-quote">"Constantly seek criticism. A well thought out critique of what you're doing is as valuable as gold"<br><br>-Elon Musk</blockquote>
+    <p>I presonnaly prefer not using the archinstall script that comes with the iso. This isnt because i am some eletist and the such it is just that i prefer knowing what i have on my distroh tothe maximum thats why i use minimal distroh like arch, gentoo and kiss linux...</p>
+    <p>I think that the command pacstrap itself is an arch installer scipt because when you go to distrohs like gentoo and kiss you realise just how much stuff is automated with pacstrap.</p>
+		<p><span class="red">Important note!!! </span>: please always check <a href="https://wiki.archlinux.org/title/Installation_guide">the arch wiki </a> since it is the most updated this guide will walk you throught the same stuff plus some extra features in simple terms.</p>
+		<p><span class="red">An other important note!!! </span>:I am not responsible for any damage done to your computer it is ultimattly your responsibility.</p>
+		<p>Without further stalling lets get to the installation.</p>
+		<p>here are all the commands before moving /mnt and after setting the disk and format<p>
+		<span class="code">pacman --noconfirm -Sy archlinux-keyring
+		<br>timedatectl set-ntp true
+		<br>lsblk
+    <br>echo "Enter the drive [ex: /dev/sda]: "
+    <br>read drive
+    <br>cfdisk $drive 
+    <br>echo "Enter the root partition [ex: /dev/sda]: "
+    <br>read partition
+    <br>mkfs.ext4 $partition 
+    <br>mount $partition /mnt 
+    <br>read -p "Did you also create a boot partition? [y/n]" answer
+    <br>if [[ $answer = y ]] ; then
+    <br>  echo "Enter boot partition: "
+    <br>  read bootpartition
+    <br>  mkfs.ext4 $bootpartition
+    <br>  mkdir /mnt/boot
+    <br>  mount $bootpartition /mnt/boot
+    <br>fi
+    <br>read -p "Did you also create a swap partition? [y/n]" answer
+    <br>if [[ $answer = y ]] ; then
+    <br>  echo "Enter swap partition: "
+    <br>  read swappartition
+    <br>  mkswap $swappartition
+    <br>  swapon $swappartition
+    <br>fi
+    <br>read -p "Did you also create a home partition? [y/n]" answer
+    <br>if [[ $answer = y ]] ; then
+    <br>  echo "Enter home partition: "
+    <br>  read homepartition
+    <br>  mkfs.ext4 $homepartition 
+    <br> mkdir /mnt/home
+    <br>  mount $homepartition /mnt/home
+    <br>fi
+    <br>pacstrap /mnt base base-devel linux linux-firmware nvidia nvidia-firmware
+    <br>genfstab -U /mnt >> /mnt/etc/fstab</span>
+		
+ <hr>
+    <footer>
+        <br>
+        <nav>
+            <a href="https://landchad.net" target="_blank">
+              <img src="/gifs/landchad.gif" target="_blank" alt="landchad.net">
+            </a>
+            <a href="https://wiby.me" target="_blank">
+              <img src="/gifs/wiby.gif" target="_blank" alt="wiby.me">
+            </a>
+            <a href="https://sadgrl.online/" target="_blank">
+              <img src="/gifs/sadgrl.gif" alt="sadgrl.online">
+            </a>
+            <a href="https://nuange.neocities.org/" target="_blank">
+              <img src="/gifs/nuange.gif" alt="nuange.neocities.org">
+            </a>
+          </nav>
+    </footer>
+</body>
+</html>
