@@ -1,77 +1,92 @@
 :root {
-    --foreground:  #111111;
-    --background:  #f1f1f1;
-    --light-gray:  #efefef;
-    --light-blue:  #e8f4fd;
-    --blue:  #0d3c61;
-    --green:  #01653a;
+    --body-bg-image: url("bg.png");
 }
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
 body {
-    color: var(--foreground);
-    max-width: 700px;
-    margin: auto;
-    font-family: "DejaVu Sans", Geneva, Verdana, sans-serif;
+      margin: auto;
+      margin-top: 1em;
+      margin-bottom: 100px;
+      color: snow;
+      padding: 1.4em 2em 1.3em 2em;
+      background: rgba(17, 17, 17, 0.938);
+      border-radius: 25px;
+      border-color: snow;
+      border-width: 1.5px;
+      border-style: solid;
 }
-h1, h2, h3, h4, h5 {
-    font-family: sans-serif;
-    margin: 1.5em 0 0;
-    line-height: 1.2em;
+html {
+    min-height: 100%;
+    padding-bottom: 5em;
+    background-image: var(--body-bg-image);
 }
-h1+h2, h2+h3, h3+h4, h4+h5 {
-    margin: .5em 0 0;
+h1,h2,h3,h4, header, footer, audio {
+    text-align: center;
+    /*font-family: c059, sans;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-h6+p {
-    display: inline;
+header ul, header ul li {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-weight: bold;
 }
-p {
-    margin: 1.5em 0;
-    line-height: 1.5em;
+main {
+    display: flex;
+    /*font-family: sans;*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-ul {
-    margin: .5em 0;
-    padding: 0 1em 0;
-    list-style-type: square;
+.left {
+    flex: 1;
+    padding: 1em;
 }
-ul li {
-    line-height: 1.5em;
-}
-ul li::marker {
-    color: var(--light-gray);
-}
-ul {
-	margin-left: 5px;
-}
-hr {
-	color: grey;
-}
-.blog {
-	border-left: 3px solid rgb(62, 86, 97);
-    	padding-left: 20px;
+
+.right {
+    flex: 1;
+    padding: 1em;
 }
 a {
-    color: inherit;
-    font-weight: inherit;
-    text-decoration: underline;
+    color: gold;
+    text-decoration-color: #fff9;
+    text-decoration: none;
 }
-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    border-bottom: 1px solid var(--light-gray);
-    margin: 0 -1em 0;
-    padding: .5em 1em;
+a:hover {
+    font-style: italic;
 }
-header p {
-    margin: 0;
-    font-size: 1.5em;
-    flex: 1;
-    word-break: keep-all;
-    white-space: pre;
+
+em, strong {
+    color: lightblue;
 }
-header nav ul {
-    display: flex;
-    gap: 1em;
-    padding: 0;
-    margin: 0 auto;
-    list-style-type: none;
+
+/* IDK what this does probably for phones :p */
+
+article{padding: 0.5em}
+
+@media (min-width: 55rem) {
+	body {max-width: 1000px}
+}
+
+@media (max-width: 520px) {
+        header img {
+            height: auto;
+            width: 100%;
+        }
+}
+
+@media only screen and (max-width: 55rem) {
+        main {display: block}
+        .flex-center .left, .left {
+            width: 100%;
+            box-sizing: border-box
+        }
+        .flex-center .right, .right {
+            width: 100%;
+            box-sizing: border-box
+        }
+        pre {overflow-x: scroll; text-align: left}
+        .line {overflow-x: scroll}
 }
