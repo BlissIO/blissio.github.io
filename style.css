@@ -1,92 +1,77 @@
-:root {
-    --body-bg-image: url("bg.png");
-}
-body::-webkit-scrollbar {
-    width: 12px;
-}
-  
-body {
-      margin: auto;
-      margin-top: 1em;
-      margin-bottom: 100px;
-      color: snow;
-      padding: 1.4em 2em 1.3em 2em;
-      background: rgba(17, 17, 17, 0.938);
-      border-radius: 25px;
-      border-color: snow;
-      border-width: 1.5px;
-      border-style: solid;
-}
-html {
-    min-height: 100%;
-    padding-bottom: 5em;
-    background-image: var(--body-bg-image);
-}
-h1,h2,h3,h4, header, footer, audio {
-    text-align: center;
-    /*font-family: c059, sans;*/
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-header ul, header ul li {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    font-weight: bold;
+body{
+    background-color: white;
+    font: 12px/20px '游ゴシック','游ゴシック体','Yu Gothic',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
 }
 main {
-    display: flex;
-    /*font-family: sans;*/
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 700px;
+    margin: auto;
+    padding-top: 60px;
 }
-.left {
-    flex: 1;
-    padding: 1em;
+cheese {
+    text-align: center;
 }
-
-.right {
-    flex: 1;
-    padding: 1em;
+cheese a {
+    text-decoration: none;
+    color: darkcyan;
+}
+cheese img {
+    height: auto;
+    width: 100%;
+    margin-top: 0px;
+    max-width: 100%;
+    vertical-align: left;
+}
+img {
+    height: auto;
+    width: 30%;
+    margin-top: 0px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+cheese li {
+    list-style: none;
+    text-decoration: none;
+    word-break: break-word;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    list-style-image: none;
+    text-align: center;
+}
+cheese ul {
+    margin: 1em 0;
 }
 a {
-    color: gold;
-    text-decoration-color: #fff9;
     text-decoration: none;
 }
-a:hover {
-    font-style: italic;
+li {
+    list-style: none;
+    text-decoration: none;
+    word-break: break-word;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    list-style-image: none;
 }
-
-em, strong {
-    color: lightblue;
+hr {
+    margin-bottom: 20px;
+    
 }
-
-/* IDK what this does probably for phones :p */
-
-article{padding: 0.5em}
-
-@media (min-width: 55rem) {
-	body {max-width: 1000px}
+roll {
+    display: table-cell;
 }
-
-@media (max-width: 520px) {
-        header img {
-            height: auto;
-            width: 100%;
-        }
+roll img {
+    float: left;
+    margin-right: 100px;
 }
-
-@media only screen and (max-width: 55rem) {
-        main {display: block}
-        .flex-center .left, .left {
-            width: 100%;
-            box-sizing: border-box
-        }
-        .flex-center .right, .right {
-            width: 100%;
-            box-sizing: border-box
-        }
-        pre {overflow-x: scroll; text-align: left}
-        .line {overflow-x: scroll}
+blog {
+    font-size: larger;
+}
+blog em {
+    color: darkgreen;
+}
+blog strong {
+    color: darkslateblue;
 }
