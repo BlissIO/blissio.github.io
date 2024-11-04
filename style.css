@@ -1,77 +1,324 @@
-body{
-    background-color: white;
-    font: 12px/20px '游ゴシック','游ゴシック体','Yu Gothic',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
-main {
-    max-width: 700px;
-    margin: auto;
-    padding-top: 60px;
+
+body {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh;
 }
-cheese {
-    text-align: center;
-}
-cheese a {
+.name {
+    color: #fff;
     text-decoration: none;
-    color: darkcyan;
 }
-cheese img {
-    height: auto;
+
+.full-bar {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.full-bar:hover {
+    transform: translateY(-2px);
+    border-color: rgba(241, 241, 241, 0.2); /* Only border color changes */
+}
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    gap: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-section, .radar-section, .achievements-section, .blog-section {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.avatar-container {
+    overflow: hidden;
     width: 100%;
-    margin-top: 0px;
-    max-width: 100%;
-    vertical-align: left;
-}
-img {
-    height: auto;
-    width: 30%;
-    margin-top: 0px;
-    max-width: 100%;
-    vertical-align: middle;
-}
-cheese li {
-    list-style: none;
-    text-decoration: none;
-    word-break: break-word;
-    display: inline-block;
-    margin-right: 30px;
-    margin-bottom: 12px;
-    font-size: 15px;
-    list-style-image: none;
-    text-align: center;
-}
-cheese ul {
-    margin: 1em 0;
-}
-a {
-    text-decoration: none;
-}
-li {
-    list-style: none;
-    text-decoration: none;
-    word-break: break-word;
-    display: inline-block;
-    margin-right: 30px;
-    margin-bottom: 12px;
-    font-size: 15px;
-    list-style-image: none;
-}
-hr {
+    height: 300px;
+    border-radius: 8px;
     margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+    perspective: 1000px; /* Adds depth to the 3D effect */
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.05);
+    object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+}
+
+.avatar-container:hover img {
+    transform: scale(1.05) rotate(-2deg); /* Slight rotation and scale for 3D effect */
+    box-shadow: 0px 15px 30px rgba(192, 132, 252, 0.3); /* Adds a soft shadow */
+}
+.skill-text {
+    font-size: 0.6em;
+}
+.name-badge{
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+
+    font-weight: 500;
+}
+
+.level-badge {
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(192, 132, 252, 0.1));
+    color: #c084fc;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    font-weight: 500;
+}
+
+.stat-bar {
+    position: relative;
+    background-color: rgba(10, 10, 10, 0.5);
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid transparent;
+    background-clip: padding-box;   
+}        
+
+
+.stat-bar::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    z-index: -1;
+    border-radius: 6px;
     
+    opacity: 0.3;
 }
-roll {
-    display: table-cell;
+
+.radar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    overflow: visible;
+    position: relative;
 }
-roll img {
-    float: left;
-    margin-right: 100px;
+
+.radar-chart {
+    width: 300px;
+    height: 300px;
+    margin: 20px 0;
 }
-blog {
-    font-size: larger;
+
+.skill-label {
+    position: absolute;
+    color: #c084fc;
+    font-size: 0.9em;
+    font-weight: 500;
 }
-blog em {
-    color: darkgreen;
+
+.skill-note {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(192, 132, 252, 0.1));
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.8em;
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    color: #c084fc;
+    max-width: 150px;
 }
-blog strong {
-    color: darkslateblue;
+
+.quote-box {
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(192, 132, 252, 0.1));
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px 0;
+    color: #c084fc;
+    border: 1px solid rgba(192, 132, 252, 0.2);
+}
+
+.projects-box{
+    padding-top: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+.projects{
+    font-size: large;
+    color: #c084fc;
+    text-decoration: none;
+}
+.projects-box:hover{
+    transform: translateY(-2px);
+}
+
+.blog-post {
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-2px);
+}
+
+.blog-banner {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-title {
+    font-size: 1.2em;
+    color: #c084fc;
+    margin-bottom: 10px;
+}
+
+.blog-meta {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.achievement-card {
+    background-color: rgba(10, 10, 10, 0.5);
+    border-radius: 6px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    border-color: rgba(192, 132, 252, 0.2);
+    transform: translateY(-2px);
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #9333ea, #cea4f7);
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 5px;
+}
+.blog-text {
+    margin-top: 70px;
+}
+
+.blog-text p{
+    padding-bottom: 15px;
+}
+
+.blog-text h3{
+    padding-bottom: 20px;
+}
+
+.blog-text h1{
+    padding-bottom: 20px;
+}
+
+.blog-link{
+    font-size: medium;
+    color: #9333ea;
+    text-decoration: none;
+}
+.blog-link:hover{
+    font-style: italic;
+}
+
+h2 {
+    color: #c084fc;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+em{
+    color: aqua;
+}
+
+strong {
+    color: aquamarine;
+}
+
+.inventory-section {
+    margin-top: 30px;
+    background-color: rgba(10, 10, 10, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center; /* Center text and emojis */
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.inventory-item {
+    font-size: 3em; /* Adjust emoji size */
+    border-radius: 8px;
+    padding: 20px; /* Add some padding */
+    transition: transform 0.3s ease;
+}
+
+.inventory-item:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+.item-title {
+    font-size: 0.8em; /* Smaller font size for titles */
+    color: #c084fc; /* Use a color that fits your theme */
+    margin-top: 5px; /* Space above the title */
+}
+
+
+@media (max-width:950px) {
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section,
+.main-content,
+.inventory-section,
+.achievements-section {
+    order: initial; /* Keeps the specified order */
+    width: 400px; /* Set a fixed width */
+    max-width: 400px;
+}
+.avatar-container{
+    height: 400px;
+}
 }

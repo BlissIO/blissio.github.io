@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Tree</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #121212;
+      font-family: Arial, sans-serif;
+    }
+
+    .skill-tree-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    /* Hexagonal Shape for Skill Tree */
+    .hexagon {
+      fill: none;
+      stroke: #00ff00;
+      stroke-width: 2;
+    }
+
+    /* Labels for the skills */
+    .label {
+      font-size: 14px;
+      fill: #00ff00;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="skill-tree-container">
+    <svg viewBox="0 0 300 300">
+      <!-- Skill Tree Hexagon Layers -->
+      <polygon points="150,50 225,87.5 225,162.5 150,200 75,162.5 75,87.5" class="hexagon" />
+      <polygon points="150,75 206.25,103.75 206.25,146.25 150,175 93.75,146.25 93.75,103.75" class="hexagon" />
+      <polygon points="150,100 187.5,120 187.5,155 150,175 112.5,155 112.5,120" class="hexagon" />
+
+      <!-- Labels for each point -->
+      <text x="150" y="35" text-anchor="middle" class="label">Intel</text>
+      <text x="240" y="90" text-anchor="middle" class="label">Spiritual</text>
+      <text x="240" y="170" text-anchor="middle" class="label">Core</text>
+      <text x="150" y="215" text-anchor="middle" class="label">Physical</text>
+      <text x="60" y="170" text-anchor="middle" class="label">Psyche</text>
+      <text x="60" y="90" text-anchor="middle" class="label">Willpower</text>
+    </svg>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+body{
+    background-color: white;
+    font: 12px/20px '游ゴシック','游ゴシック体','Yu Gothic',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS P Gothic',sans-serif;
+}
+main {
+    max-width: 700px;
+    margin: auto;
+    padding-top: 60px;
+}
+cheese {
+    text-align: center;
+}
+cheese a {
+    text-decoration: none;
+    color: darkcyan;
+}
+cheese img {
+    height: auto;
+    width: 100%;
+    margin-top: 0px;
+    max-width: 100%;
+    vertical-align: left;
+}
+img {
+    height: auto;
+    width: 30%;
+    margin-top: 0px;
+    max-width: 100%;
+    vertical-align: middle;
+}
+cheese li {
+    list-style: none;
+    text-decoration: none;
+    word-break: break-word;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    list-style-image: none;
+    text-align: center;
+}
+cheese ul {
+    margin: 1em 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+    text-decoration: none;
+    word-break: break-word;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    list-style-image: none;
+}
+hr {
+    margin-bottom: 20px;
+    
+}
+roll {
+    display: table-cell;
+}
+roll img {
+    float: left;
+    margin-right: 100px;
+}
+blog {
+    font-size: larger;
+}
+blog em {
+    color: darkgreen;
+}
+blog strong {
+    color: darkslateblue;
+}
